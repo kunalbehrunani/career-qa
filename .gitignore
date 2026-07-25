@@ -4,6 +4,16 @@ retrieval-augmented-generation/chroma_db/
 __pycache__/
 *.pyc
 
+# Real career content — templates (*.md.example) are tracked, actual filled-in
+# docs are not. Copy a .md.example to its real filename and fill it in locally;
+# git will never see that file.
+retrieval-augmented-generation/docs/*.md
+retrieval-augmented-generation/docs/companies/*.md
+retrieval-augmented-generation/docs/projects/*.md
+!retrieval-augmented-generation/docs/*.md.example
+!retrieval-augmented-generation/docs/companies/*.md.example
+!retrieval-augmented-generation/docs/projects/*.md.example
+
 # Node
 node_modules/
 dist/

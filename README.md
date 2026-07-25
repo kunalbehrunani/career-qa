@@ -54,6 +54,10 @@ project:
 ## Outcome & Impact
 ```
 
+## Adding your own career content
+
+`docs/` ships with generic templates only (`*.md.example`). Copy one, drop the `.example`, fill it in — the real filename is gitignored, so it's never tracked.
+
 ## Getting started
 
 **Python retrieval engine** (working today):
