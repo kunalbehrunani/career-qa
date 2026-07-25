@@ -89,14 +89,3 @@ cd frontend && npm install && npm run dev
 ```
 
 Runs on `http://localhost:5173`. Fill in the form; it calls the backend and shows a copy-ready prompt.
-
-## Status
-
-- [x] Repo scaffolded
-- [x] Docs folder structure + templates defined
-- [x] `ingest.py` — chunk, embed, store docs
-- [x] `retrieve.py` — retrieval-only, JSON output (verified working)
-- [ ] Real career content fully fleshed out (drafted from resume/cover letter; narrative sections still need manual detail — see `<!-- TODO -->` markers)
-- [x] NestJS backend (`POST /prompt`) — verified working end-to-end with the Python retrieval engine
-- [x] Vue frontend (form + copy-ready output) — Tailwind CSS, split-panel layout, verified working
-- [ ] End-to-end test
