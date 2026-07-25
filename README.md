@@ -14,7 +14,7 @@ RAG-powered application that intelligently answers interview questions based on 
 
 - **Python 3** — `sentence-transformers` (local embeddings) + `ChromaDB` (local vector store)
 - **NestJS** (`backend/`) — receives a question, runs local retrieval, assembles the final prompt
-- **Vue 3 + Vite** (`frontend/`) — form for company name / company context / question, shows the copy-ready prompt
+- **Vue 3 + Vite + Tailwind CSS** (`frontend/`) — form for company name / company context / question, shows the copy-ready prompt
 
 ## Structure
 
@@ -74,7 +74,21 @@ python retrieve.py "your question" --company "optional target company"
 
 `retrieve.py` prints a single JSON object containing the top matching chunks, so it can be consumed by another process — the NestJS backend does this next.
 
-**Backend / frontend** — not built yet; see Status below.
+**Backend** — from repo root:
+
+```bash
+cd backend && npm install && npm run start:dev
+```
+
+Runs on `http://localhost:3000`, exposes `POST /prompt`.
+
+**Frontend** — from repo root, in a separate terminal:
+
+```bash
+cd frontend && npm install && npm run dev
+```
+
+Runs on `http://localhost:5173`. Fill in the form; it calls the backend and shows a copy-ready prompt.
 
 ## Status
 
@@ -84,5 +98,5 @@ python retrieve.py "your question" --company "optional target company"
 - [x] `retrieve.py` — retrieval-only, JSON output (verified working)
 - [ ] Real career content fully fleshed out (drafted from resume/cover letter; narrative sections still need manual detail — see `<!-- TODO -->` markers)
 - [x] NestJS backend (`POST /prompt`) — verified working end-to-end with the Python retrieval engine
-- [ ] Vue frontend (form + copy-ready output)
+- [x] Vue frontend (form + copy-ready output) — Tailwind CSS, split-panel layout, verified working
 - [ ] End-to-end test
