@@ -1,0 +1,18 @@
+# Python
+retrieval-augmented-generation/venv/
+retrieval-augmented-generation/chroma_db/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+.nuxt/
+.output/
+
+# Env / secrets (kept out even though unused today, in case that changes later)
+.env
+.env.local
+
+# OS
+.DS_Store
