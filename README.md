@@ -83,6 +83,6 @@ python retrieve.py "your question" --company "optional target company"
 - [x] `ingest.py` — chunk, embed, store docs
 - [x] `retrieve.py` — retrieval-only, JSON output (verified working)
 - [ ] Real career content fully fleshed out (drafted from resume/cover letter; narrative sections still need manual detail — see `<!-- TODO -->` markers)
-- [ ] NestJS backend (`POST /prompt`)
+- [x] NestJS backend (`POST /prompt`) — verified working end-to-end with the Python retrieval engine
 - [ ] Vue frontend (form + copy-ready output)
 - [ ] End-to-end test
